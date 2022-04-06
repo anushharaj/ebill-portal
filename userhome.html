@@ -1,0 +1,178 @@
+<?php
+include("config.php");
+session_start();
+$username=$_SESSION['usr'];
+$vtb=mysql_query("select *from tbluser where username='$username'");
+$r=mysql_fetch_row($vtb);
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Modern Business
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>UserHOME</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<style type='text/css'>
+#menu14 {
+       width: 200px;
+       margin: 10px;
+       }
+
+#menu14 ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#menu14 img {
+border: none;
+}
+
+#menu14 li a {
+       height: 32px;
+         voice-family: "\"}\"";
+         voice-family: inherit;
+         height: 24px;
+       text-decoration: none;
+       }
+
+#menu14 li a:link, #menu14 li a:visited {
+       color: #333;
+       display: block;
+       background:  url(http://2.bp.blogspot.com/_4HKUHirY_2U/Sw9J34GZyxI/AAAAAAAAAW8/hv18w33snxc/menu14.gif);
+       padding: 8px 0 0 10px;
+       }
+
+#menu14 li a:hover, #menu14 li #current {
+       color: #FFF;
+       background:  url(http://2.bp.blogspot.com/_4HKUHirY_2U/Sw9J34GZyxI/AAAAAAAAAW8/hv18w33snxc/menu14.gif) 0 -32px;
+       padding: 8px 0 0 10px;
+       }
+</style>
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header">
+    <div class="fl_left">
+     <h1><a href="index.php"><b>KSEB</b></a></h1>
+      <p><b>Save Energy...Save Electricity...</b></p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li  class="active"><a href="userhome.php">Home</a></li>
+        
+        <li><a href="userfeedback.php">CONSUMER CORNER</a></li>
+        <li><a href="#">BILL SECTION</a>
+          <ul>
+            <li><a href="userbillview.php">BILL VIEW</a></li>
+            <li><a href="userenquiry.php">ENQUIRY</a></li>
+            
+          </ul>
+        </li>
+        <li><a href="#">CONSUMER FORUM</a>
+          <ul>
+            <li><a href="usermeter.php">METER CHANGE</a></li>
+            <li><a href="userdisconnection.php">DISCONNECTION</a></li>
+            
+          </ul>
+        </li>
+        <li class="last"><a href="logout.php">logout</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col7"><h1 align="center"><font color="#6894F9">WELCOME <?php echo $username; ?>...</font></h1></div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col4">
+  <div class="container">
+    <div class="content">
+     
+      
+      
+      <p><form action="" method="post">
+      <table width="200" border="0">
+  <tr>
+  <th width="17%" rowspan="3"><img src="upload/<?php echo $r[10]; ?>" width="112" height="109"/></th>
+    <th width="50%" height="34" scope="row">NAME</th>
+    <td width="33%"><?php echo $r[2] ?></td>
+  </tr>
+  <tr>
+  <th width="50%" height="34" scope="row">CONSUMER NO.</th>
+    <td width="33%"><?php echo $r[1] ?></td>
+  </tr>
+  <tr>
+  <th width="50%" height="34" scope="row">ADDRESS</th>
+    <td width="33%"><?php echo $r[5] ?></td>
+  </tr>
+  <tr>
+  <th></th>
+  <th height="35" scope="row">SECTION</th>
+    <td><?php echo $r[6] ?></td>
+  </tr>
+  <tr>
+  <th></th>
+    <th height="41" scope="row">CONTACT NUMBER</th>
+    <td><?php echo $r[8] ?></td>
+  </tr>
+  <tr>
+  <th></th>
+    <th height="38" scope="row">EMAIL ID</th>
+    <td><?php echo $r[9] ?></td>
+  </tr>
+</table>
+
+      </form></p>
+    
+      <div id="respond"></div>
+    </div>
+    <div class="column">
+      <div class="subnav">
+        <h2>QUICK LINKS</h2>
+        <div id="menu14">
+
+<ul>
+        
+<li><a id="current" href="userhome.php"><b>HOME</b></a></li>
+
+<li><a href="userprofile.php"><b>PROFILE SETTINGS</b></a></li>
+
+<li><a href="userbillview.php"><b>BILL VIEW</b></a></li>
+<li><a href="userenquiry.php"><b>BILL ENQUIRY</b></a></li>
+<li><a href="userdisconnection.php"><b>DISCONNECTION</b></a></li>
+<li><a href="usermeter.php"><b>METER CHANGE</b></a></li>
+<li><a href="userfeedback.php"><b>CONSUMERS CORNER</b></a></li>
+<li><a href="userinbox.php"><b>INBOX</b></a></li>
+</ul>
+
+</div>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5"></div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">INZENJER IT SOLUTION</a></p>
+    <p class="fl_right">Powered by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">Tentrasoft</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body
+{
+   background-color: black;
+   color:white;
+	margin: 0;
+  /*height: 97%;
+  background-image: url("mount.jpg");
+  background-size: cover;
+  */
+}
+.menu
+{
+
+text-align: center;
+width: 100%;
+padding: 25px;
+position: fixed;
+background-color: green;
+}
+.menu a
+{
+float:left;
+display: block;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+color: beige;
+}
+.menu a:hover
+{
+background-color: cornsilk;
+color: black;
+}
+.con{
+position:relative;
+top: 100px;
+}
+
+

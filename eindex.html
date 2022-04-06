@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>eindex</title>
+    <link rel="stylesheet" href="e.css">
+</head>
+<body>
+<div class="cheader">
+	<a href="eindex.html">HOME</a>  
+	 <a href="ebill.html">BILLING SECTION</a>
+	 <a href="emanage.html">MANANGE CUSTOMER</a>
+</div>
+	<div class="con">
+	<center>	<h3> EMPLOYEE PROFILE </h3></center>
+	<center>
+		<br>
+	<table width="370" height="158" border="1">
+	  <tbody>
+	    <tr>
+        <th width="50%" height="34" scope="row">NAME:</th>
+    <td width="33%"><?php echo $r[2] ?></td>
+        </tr>
+      <tr>
+       <th width="50%" height="34" scope="row">REGION CODE:</th>
+    <td width="33%"><?php echo $r[1] ?></td>
+        </tr>
+      <tr>
+        <th width="50%" height="34" scope="row">ADDRESS:</th>
+    <td width="33%"><?php echo $r[5] ?></td>
+        </tr><tr>
+        <th height="35" scope="row">SECTION:</th>
+    <td><?php echo $r[6] ?></td>
+        </tr><tr>
+        <th height="41" scope="row">CONTACT NUMBER:</th>
+    <td><?php echo $r[8] ?></td>
+        </tr> <tr>
+        <th width="50%" height="34" scope="row">EMAIL:</th>
+    <td width="33%"><?php echo $r[5] ?></td>
+        </tr>
+      </tbody>
+		</table>
+		</center>
+	</div>
+	
+
+	
+	</body>
+	</html>
